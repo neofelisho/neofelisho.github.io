@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.44" />
+    
+    
+    <title>Diagnostic timeout exceptions in StackExchange.Redis for Azure Redis Cache • 尼欧の</title>
+<meta name="description" content="neo&#39;s blog :: programming, photography, thoughts, and memo">
+<meta name="keywords" content="blog,c#,golang,.net,azure,backend,thoughts,photography">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Diagnostic timeout exceptions in StackExchange.Redis for Azure Redis Cache"/>
+<meta name="twitter:description" content="Story There were many failed requests while we testing our system by VSTS cloud test. Concurrent 10000 users kept playing games or viewing reports. &gt;Timeout performing HEXISTS XXX.YYY:OAuthTokenStorages:AccessToken, inst: 267, mgr: Inactive, err: never, queue: 0, qu: 0, qs: 0, qc: 0, wr: 0, wq: 0, in: 0, ar: 0, clientName: RD__________F9, serverEndpoint: Unspecified/xxx.redis.cache.windows.net:6380, keyHashSlot: 1758, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=45,Free=32722,Min=1,Max=32767) (Please take a look at this article for some common client-side issues that can cause timeouts: http://stackexchange."/>
+
+<meta property="og:title" content="Diagnostic timeout exceptions in StackExchange.Redis for Azure Redis Cache" />
+<meta property="og:description" content="Story There were many failed requests while we testing our system by VSTS cloud test. Concurrent 10000 users kept playing games or viewing reports. &gt;Timeout performing HEXISTS XXX.YYY:OAuthTokenStorages:AccessToken, inst: 267, mgr: Inactive, err: never, queue: 0, qu: 0, qs: 0, qc: 0, wr: 0, wq: 0, in: 0, ar: 0, clientName: RD__________F9, serverEndpoint: Unspecified/xxx.redis.cache.windows.net:6380, keyHashSlot: 1758, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=45,Free=32722,Min=1,Max=32767) (Please take a look at this article for some common client-side issues that can cause timeouts: http://stackexchange." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://neofelisho.github.io/2018/05/diagnostic-timeout-exceptions-in-stackexchange.redis-for-azure-redis-cache/" />
+
+
+
+<meta property="article:published_time" content="2018-05-19T20:51:00&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-05-19T20:51:00&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css" integrity="sha384-7xAnn7Zm3QC1jFjVc1A6v/toepoG3JXboQYzbM0jrPzou9OFXm/fY6Z/XiIebl/k" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+    <!-- highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+    <link rel="stylesheet" href="https://neofelisho.github.io//css/print.min.css" media="print">
+    <link rel="stylesheet" href="https://neofelisho.github.io//css/hyde-hyde.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png"></head>
+
+    <body>
+        
+<div class="sidebar text-center">
+  <div class="container ">
+    <div class="sidebar-about">
+      <div class="site__title">
+        <a href="https://neofelisho.github.io/">尼欧の</a>
+      </div>
+      
+      
+      
+      <p>
+        <img src="https://neofelisho.github.io/img/avatar.jpg" alt="Author Image" class="img--circle img--headshot element--center"> 
+      </p>
+      
+      <p class="site__description">
+         programming, photography, thoughts, memo 
+      </p>
+    </div>
+    <div>
+	<ul class="sidebar-nav">
+		
+				<li>
+					<a href="/posts/">
+						<span>Articles</span>
+					</a>
+				</li>
+		</li>
+	</ul>
+</div>
+
+    <p>
+      <section class="social text-center">
+	<a href="https://twitter.com/neofelisho"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	&nbsp;<a href="https://facebook.com/neofelisho"><i class="fab fa-facebook-f"></i></a>
+	&nbsp;<a href="https://github.com/neofelisho"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	&nbsp;<a href="https://instagram.com/neofelisho"><i class="fab fa-instagram fa-lg" aria-hidden="true"></i></a>
+	&nbsp;<a href="https://linkedin.com/in/neofelisho"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	&nbsp;<a href="mailto:neofelisho&#43;blog@gmail.com"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+</section>
+
+    </p>
+    <p class="copyright">
+      &copy; 2018 neofelisho.
+      <a href="https://creativecommons.org/licenses/by-sa/4.0">Some Rights Reserved</a>.
+      <br/>Built with
+      <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+      
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+<div class="content container">
+            <article>
+  <header>
+    <h1>Diagnostic timeout exceptions in StackExchange.Redis for Azure Redis Cache</h1>
+     
+    
+<div class="post__meta">
+    
+    <i class="fas fa-calendar-alt"></i> May 19, 2018
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="post__tag" href="/tags/azure">#azure</a>
+           
+      
+          <a class="post__tag" href="/tags/redis">#redis</a>
+           
+      
+          <a class="post__tag" href="/tags/timeout">#timeout</a>
+           
+      
+          <a class="post__tag" href="/tags/application-insights">#application insights</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 2 min read
+</div>
+
+  </header>
+  <div class="post">
+    
+
+<p><strong>Story</strong>
+There were many failed requests while we testing our system by VSTS cloud test. Concurrent 10000 users kept playing games or viewing reports.
+<img src="https://2.bp.blogspot.com/-vtXs8coCoXg/Wv_I92kcKjI/AAAAAAAAUaU/tKeRGJ_QT2YmBwJ-6EH2zSbmHfbayCkfwCLcBGAs/s1600/Diagnostic-timeout-exceptions-for-redis-01.png" alt="Picture-01" />
+&gt;Timeout performing HEXISTS XXX.YYY:OAuthTokenStorages:AccessToken, inst: 267, mgr: Inactive, err: never, queue: 0, qu: 0, qs: 0, qc: 0, wr: 0, wq: 0, in: 0, ar: 0, clientName: RD__________F9, serverEndpoint: Unspecified/xxx.redis.cache.windows.net:6380, keyHashSlot: 1758, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=45,Free=32722,Min=1,Max=32767) (Please take a look at this article for some common client-side issues that can cause timeouts: <a href="http://stackexchange.github.io/StackExchange.Redis/Timeouts">http://stackexchange.github.io/StackExchange.Redis/Timeouts</a>)</p>
+
+<p><img src="https://4.bp.blogspot.com/-S4H1S4cWlcA/Wv_JcxvoYyI/AAAAAAAAUac/XBr29445ZcoclhYRukjB4bH-rFKMAC-kACLcBGAs/s1600/Diagnostic-timeout-exceptions-for-redis-02.png" alt="Picture-02" />
+&gt;Timeout performing ZRANGEBYSCORE ixxxr:1, inst: 1, mgr: Inactive, err: never, queue: 4, qu: 0, qs: 4, qc: 0, wr: 0, wq: 0, in: 287, ar: 0, clientName: RD__________67, serverEndpoint: Unspecified/xxx.redis.cache.windows.net:6380, keyHashSlot: 5222, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=12,Free=32755,Min=1,Max=32767) (Please take a look at this article for some common client-side issues that can cause timeouts: <a href="http://stackexchange.github.io/StackExchange.Redis/Timeouts">http://stackexchange.github.io/StackExchange.Redis/Timeouts</a>)</p>
+
+<h2 id="toc_0">&gt;</h2>
+
+<p><code>Problem</code>: <strong>Singleton of Redis Multiplextor?</strong></p>
+
+<p>During the load test, we kept monitoringthe statistics of Redis, App Service Plan and VM of MS-SQL. The CPU, memory and disk I/O loading seemed to be ok. So maybe there are something wrong with network, or with our codes to manipulate Redis.</p>
+
+<p>We added logs in constructor of Redis multiplextor to make sure that we kept singleton in each web sites. It passed.</p>
+
+<hr />
+
+<p><code>Problem</code>: <strong>Too many busy worker threads</strong></p>
+
+<p><a href="https://gist.github.com/JonCole/db0e90bedeb3fc4823c2#burst-of-traffic">According to this section</a>: Burst of traffic: Notice that in the &ldquo;IOCP&rdquo; section and the &ldquo;WORKER&rdquo; section you have a &ldquo;Busy&rdquo; value that is greater than the &ldquo;Min&rdquo; value. This means that your threadpool settings need adjusting.</p>
+
+<p><a href="https://gist.github.com/JonCole/e65411214030f0d823cb">And according to JonCole&rsquo;s another post about ThreadPool</a>: in my first exception, there are 45 busy worker threads now and our system is configured to allow 1 minimum worker thread. So our system would cause (45-1)*500ms = 22 seconds delay&hellip;OMG.</p>
+
+<p><code>Resolution</code>: Currently we use P1 pricing tier of WebApp. It&rsquo;s single core with 1.75GB RAM. So maybe we should increase the &ldquo;minIoThreads&rdquo; and &ldquo;minWorkerThreads&rdquo; to 100 or more in configuration settings.</p>
+
+<pre><code class="language-csharp=">//Alter minWorkerThreads and minIoThreads settings
+ThreadPool.SetMinThreads(256, 16);
+</code></pre>
+
+<p><code>Before</code> <img src="https://c1.staticflickr.com/1/882/41556068634_929899eb45_o_d.png" alt="minWorkerThread = 1" /></p>
+
+<p><code>After</code> <img src="https://c1.staticflickr.com/1/829/42230321742_e658f7de18_o_d.png" alt="minWorerTHreads = 100" /></p>
+
+<p><code>Reference</code> <a href="https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#net-threadpool-and-aspnet-settings">.NET Threadpool and ASP.NET Settings</a></p>
+
+<p><code>Reference</code> <a href="https://msdn.microsoft.com/en-us/library/system.threading.threadpool.setminthreads(v=vs.110).aspx">ThreadPool.SetMinThreads Method</a></p>
+
+<hr />
+
+<p><code>Problem</code>: <strong>Lack async</strong></p>
+
+<p>Obviously, but I have to do <a href="https://neofelisho.github.io/neofelisho.github.io/post/2018/05/22/2018-05-22-test-redis-sync-timeout.html">more test</a> about the effect between sync and async in Redis utilization.</p>
+
+<hr />
+
+<p><code>Mysterious</code>: BTW, the default settings of &ldquo;minIoThreads&rdquo; and &ldquo;minWorkerThreads&rdquo; are 4. Why the settings in our system became 1?</p>
+
+<hr />
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://stackexchange.github.io/StackExchange.Redis/Timeouts">https://stackexchange.github.io/StackExchange.Redis/Timeouts</a></p>
+
+<p><a href="https://azure.microsoft.com/zh-tw/blog/investigating-timeout-exceptions-in-stackexchange-redis-for-azure-redis-cache/">Investigating timeout exceptions in StackExchange.Redis for Azure Redis Cache</a></p>
+
+<p><a href="https://gist.github.com/JonCole/db0e90bedeb3fc4823c2">Diagnosing Redis errors on the client side</a></p>
+
+  </div>
+  <div>
+    <ul class="post__nav">
+        <li class="post__nav--next">
+            <a href="/2018/05/test-the-effect-of-redis-connection-setting-synctimeout/">                
+                <span class="next__heading">NEXT</span>
+                <span>Test the effect of Redis connection setting: syncTimeout</span>
+            </a>
+            <i class="fas fa-chevron-right"></i>
+        </li>
+        <li class="post__nav--previous">
+            
+        </li>
+    </ul>
+</div>
+
+  <div class="post__related">
+    
+    
+    
+</div>
+</article>
+        </div>
+        <div class="container content"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+    hljs.configure({languages: []});
+    hljs.initHighlightingOnLoad();
+</script>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+      (function () {
+            
+            
+            
+            if (location.hostname === "localhost" || 
+            	location.hostname === "127.0.0.1" || 
+            	location.hostname === "") {
+                return;
+			}
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            var disqus_shortname = 'https-neofelisho-github-io';
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(
+                  dsq);
+      })();
+</script>
+
+<noscript>
+	Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+    <!-- Google Analytics -->
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-122668877-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </body>
+</html>
