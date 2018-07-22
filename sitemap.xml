@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://neofelisho.github.io/2018/07/2018-07-22-mongodb-getting-started/</loc>
+    <lastmod>2018-07-22T23:01:09+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://neofelisho.github.io/2018/07/set-parameters-by-additional-arguments-of-vsts/</loc>
     <lastmod>2018-07-18T23:00:00+08:00</lastmod>
   </url>
@@ -69,6 +74,12 @@
   </url>
   
   <url>
+    <loc>https://neofelisho.github.io/tags/c#/</loc>
+    <lastmod>2018-07-22T23:01:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://neofelisho.github.io/categories/</loc>
     <priority>0</priority>
   </url>
@@ -104,6 +115,18 @@
   </url>
   
   <url>
+    <loc>https://neofelisho.github.io/tags/index/</loc>
+    <lastmod>2018-07-22T23:01:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/mongodb/</loc>
+    <lastmod>2018-07-22T23:01:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://neofelisho.github.io/tags/network-stability/</loc>
     <lastmod>2018-07-02T23:00:00+08:00</lastmod>
     <priority>0</priority>
@@ -111,7 +134,7 @@
   
   <url>
     <loc>https://neofelisho.github.io/posts/</loc>
-    <lastmod>2018-07-18T23:00:00+08:00</lastmod>
+    <lastmod>2018-07-22T23:01:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -183,7 +206,7 @@
   
   <url>
     <loc>https://neofelisho.github.io/</loc>
-    <lastmod>2018-07-18T23:00:00+08:00</lastmod>
+    <lastmod>2018-07-22T23:01:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
