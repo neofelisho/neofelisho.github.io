@@ -58,7 +58,7 @@
 
     <body>
         
-<div class="sidebar text-center">
+<div class="sidebar">
   <div class="container ">
     <div class="sidebar-about">
       <div class="site__title">
@@ -88,7 +88,7 @@
 </div>
 
     <p>
-      <section class="social text-center">
+      <section class="social">
 	<a href="https://twitter.com/neofelisho"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
 	&nbsp;<a href="https://facebook.com/neofelisho"><i class="fab fa-facebook-f"></i></a>
 	&nbsp;<a href="https://github.com/neofelisho"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
@@ -131,16 +131,16 @@
           <br/>
            <i class="fas fa-tags"></i>
           
-          <a class="post__tag" href="/tags/azure">#azure</a>
+          <a class="post__tag" href="/tags/azure">azure</a>
            
       
-          <a class="post__tag" href="/tags/redis">#redis</a>
+          <a class="post__tag" href="/tags/redis">redis</a>
            
       
-          <a class="post__tag" href="/tags/timeout">#timeout</a>
+          <a class="post__tag" href="/tags/timeout">timeout</a>
            
       
-          <a class="post__tag" href="/tags/application-insights">#application insights</a>
+          <a class="post__tag" href="/tags/application-insights">application insights</a>
           
       
     
@@ -148,6 +148,7 @@
     <br/>
     <i class="fas fa-clock"></i> 2 min read
 </div>
+
 
   </header>
   <div class="post">
@@ -212,19 +213,12 @@ ThreadPool.SetMinThreads(256, 16);
 <p><a href="https://gist.github.com/JonCole/db0e90bedeb3fc4823c2">Diagnosing Redis errors on the client side</a></p>
 
   </div>
-  <div>
-    <ul class="post__nav">
-        <li class="post__nav--next">
-            <a href="/2018/05/test-the-effect-of-redis-connection-setting-synctimeout/">                
-                <span class="next__heading">NEXT</span>
-                <span>Test the effect of Redis connection setting: syncTimeout</span>
-            </a>
-            <i class="fas fa-chevron-right"></i>
-        </li>
-        <li class="post__nav--previous">
-            
-        </li>
-    </ul>
+  <div class="post--navigation post--navigation-single">
+    
+    <a href="/2018/05/test-the-effect-of-redis-connection-setting-synctimeout/" class="post--navigation-next">
+      <span>Test the effect of Redis connection setting: syncTimeout</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
 </div>
 
   <div class="post__related">

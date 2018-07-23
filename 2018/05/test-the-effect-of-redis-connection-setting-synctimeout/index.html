@@ -64,7 +64,7 @@ Our system uses Redis as OAuth token storage, it looks kind of what Spring Frame
 
     <body>
         
-<div class="sidebar text-center">
+<div class="sidebar">
   <div class="container ">
     <div class="sidebar-about">
       <div class="site__title">
@@ -94,7 +94,7 @@ Our system uses Redis as OAuth token storage, it looks kind of what Spring Frame
 </div>
 
     <p>
-      <section class="social text-center">
+      <section class="social">
 	<a href="https://twitter.com/neofelisho"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
 	&nbsp;<a href="https://facebook.com/neofelisho"><i class="fab fa-facebook-f"></i></a>
 	&nbsp;<a href="https://github.com/neofelisho"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
@@ -137,16 +137,16 @@ Our system uses Redis as OAuth token storage, it looks kind of what Spring Frame
           <br/>
            <i class="fas fa-tags"></i>
           
-          <a class="post__tag" href="/tags/azure">#azure</a>
+          <a class="post__tag" href="/tags/azure">azure</a>
            
       
-          <a class="post__tag" href="/tags/redis">#redis</a>
+          <a class="post__tag" href="/tags/redis">redis</a>
            
       
-          <a class="post__tag" href="/tags/timeout">#timeout</a>
+          <a class="post__tag" href="/tags/timeout">timeout</a>
            
       
-          <a class="post__tag" href="/tags/synctimeout">#synctimeout</a>
+          <a class="post__tag" href="/tags/synctimeout">synctimeout</a>
           
       
     
@@ -154,6 +154,7 @@ Our system uses Redis as OAuth token storage, it looks kind of what Spring Frame
     <br/>
     <i class="fas fa-clock"></i> 2 min read
 </div>
+
 
   </header>
   <div class="post">
@@ -197,23 +198,15 @@ Our system uses Redis as OAuth token storage, it looks kind of what Spring Frame
 <p>To be continued&hellip;</p>
 
   </div>
-  <div>
-    <ul class="post__nav">
-        <li class="post__nav--next">
-            <a href="/2018/05/cannot-publish-to-deployment-slot-of-azure-app-service/">                
-                <span class="next__heading">NEXT</span>
-                <span>Cannot publish to deployment slot of Azure app service</span>
-            </a>
-            <i class="fas fa-chevron-right"></i>
-        </li>
-        <li class="post__nav--previous">
-            <i class="fas fa-chevron-left"></i>
-            <a href="/2018/05/diagnostic-timeout-exceptions-in-stackexchange.redis-for-azure-redis-cache/">                
-                <span class="previous__heading">PREVIOUS</span>
-                <span class="previous__title">Diagnostic timeout exceptions in StackExchange.Redis for Azure Redis Cache</span>
-            </a>
-        </li>
-    </ul>
+  <div class="post--navigation post--navigation-single">
+    <a href="/2018/05/diagnostic-timeout-exceptions-in-stackexchange.redis-for-azure-redis-cache/" class="post--navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span>Diagnostic timeout exceptions in StackExchange.Redis for Azure Redis Cache</span>
+    </a>
+    <a href="/2018/05/cannot-publish-to-deployment-slot-of-azure-app-service/" class="post--navigation-next">
+      <span>Cannot publish to deployment slot of Azure app service</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
 </div>
 
   <div class="post__related">
