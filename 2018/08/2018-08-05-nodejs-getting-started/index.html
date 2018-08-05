@@ -16,25 +16,23 @@
     
     
 
-<title>Set parameters by additional arguments of VSTS • 尼欧の</title>
+<title>2018 08 05 Nodejs Getting Started • 尼欧の</title>
 <meta name="description" content="neo&#39;s blog :: programming, photography, thoughts, and memo">
 <meta name="keywords" content="blog,c#,golang,.net,azure,backend,thoughts,photography">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Set parameters by additional arguments of VSTS"/>
-<meta name="twitter:description" content="Problem There were some problems when we migrated our CI/CD from Git/Jenkins to VSTS. After many trial-and-errors, we solved them and note here for memo. - Incorrect replacement of connection strings. - Incorrect replacement of email address. - Incorrect replacement when using xml transform insert.
-Summary - VSTS set parameters according to the base web.config. - VSTS set parameters by replacing them in web.config. - Following the previous two, there should be the config sections in base web."/>
+<meta name="twitter:title" content="2018 08 05 Nodejs Getting Started"/>
+<meta name="twitter:description" content="Reference 1.Cheetsheet 2.Create readable stream from object 3.Debugging tests in VS Code 4.Node.js v10.8.0 Documentation (FileSystem) 5.深入理解 Node.js Stream 内部机制 6.Node.js 教程 @ RUNOOB.COM 7.Mocha getting started 8.Command JavaScript Design Pattern 9.單元測試：Mocha、Chai 和 Sinon 10.测试框架 Mocha 实例教程 11.测试用例：mocha，should，istanbul 12.非同步程式碼之霧：Node.js 的事件迴圈與 EventEmitter 13.[JS] 使用 ESLint 提高程式碼品質 14.淺入淺出 eslint 與實作"/>
 
-<meta property="og:title" content="Set parameters by additional arguments of VSTS" />
-<meta property="og:description" content="Problem There were some problems when we migrated our CI/CD from Git/Jenkins to VSTS. After many trial-and-errors, we solved them and note here for memo. - Incorrect replacement of connection strings. - Incorrect replacement of email address. - Incorrect replacement when using xml transform insert.
-Summary - VSTS set parameters according to the base web.config. - VSTS set parameters by replacing them in web.config. - Following the previous two, there should be the config sections in base web." />
+<meta property="og:title" content="2018 08 05 Nodejs Getting Started" />
+<meta property="og:description" content="Reference 1.Cheetsheet 2.Create readable stream from object 3.Debugging tests in VS Code 4.Node.js v10.8.0 Documentation (FileSystem) 5.深入理解 Node.js Stream 内部机制 6.Node.js 教程 @ RUNOOB.COM 7.Mocha getting started 8.Command JavaScript Design Pattern 9.單元測試：Mocha、Chai 和 Sinon 10.测试框架 Mocha 实例教程 11.测试用例：mocha，should，istanbul 12.非同步程式碼之霧：Node.js 的事件迴圈與 EventEmitter 13.[JS] 使用 ESLint 提高程式碼品質 14.淺入淺出 eslint 與實作" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://neofelisho.github.io/2018/07/set-parameters-by-additional-arguments-of-vsts/" />
+<meta property="og:url" content="https://neofelisho.github.io/2018/08/2018-08-05-nodejs-getting-started/" />
 
 
 
-<meta property="article:published_time" content="2018-07-18T23:00:00&#43;08:00"/>
+<meta property="article:published_time" content="2018-08-05T23:50:20&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-07-18T23:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2018-08-05T23:50:20&#43;08:00"/>
 
 
 
@@ -149,13 +147,13 @@ Summary - VSTS set parameters according to the base web.config. - VSTS set param
             
     <article>
   <header>
-    <h1>Set parameters by additional arguments of VSTS</h1>
+    <h1>2018 08 05 Nodejs Getting Started</h1>
      
     
 <div class="post__meta">
     
     
-      <i class="fas fa-calendar-alt"></i> Jul 18, 2018
+      <i class="fas fa-calendar-alt"></i> Aug 5, 2018
     
     
     
@@ -166,22 +164,7 @@ Summary - VSTS set parameters according to the base web.config. - VSTS set param
           <br/>
            <i class="fas fa-tags"></i>
           
-          <a class="post__tag" href="/tags/azure">azure</a>
-           
-      
-          <a class="post__tag" href="/tags/vsts">vsts</a>
-           
-      
-          <a class="post__tag" href="/tags/web.config">web.config</a>
-           
-      
-          <a class="post__tag" href="/tags/setparameters">setparameters</a>
-           
-      
-          <a class="post__tag" href="/tags/additional-arguments">additional arguments</a>
-           
-      
-          <a class="post__tag" href="/tags/continuous-delivery">continuous delivery</a>
+          <a class="post__tag" href="/tags/node.js">node.js</a>
           
       
     
@@ -193,36 +176,35 @@ Summary - VSTS set parameters according to the base web.config. - VSTS set param
 
   </header>
   <div class="post">
-    <p><code>Problem</code> There were some problems when we migrated our CI/CD from Git/Jenkins to VSTS.
-After many trial-and-errors, we solved them and note here for memo.
-- Incorrect replacement of connection strings.
-- Incorrect replacement of email address.
-- Incorrect replacement when using xml transform <code>insert</code>.</p>
+    
 
-<p><code>Summary</code>
-- VSTS set parameters according to the base web.config.
-- VSTS set parameters by replacing them in web.config.
-- Following the previous two, there should be the config sections in base web.config we want to replace them.
-We still can keep non-sensitve parameters in web.[environment].config, and it works with VSTS.
-- Additional arguments is somethins like command line arguments, not XML format.
-Origianlly we set the email parameter in web.config like <code>Neo Ho &amp;lt;neofelisho@gmail.com&amp;gt;</code>,
-but in arguments we just use the plain text format like `<code>Neo Ho &lt;neofelisho@gmail.com&gt;</code>.</p>
+<h2 id="reference">Reference</h2>
+
+<p>1.<a href="https://devhints.io/nodejs-stream">Cheetsheet</a>
+2.<a href="https://stackoverflow.com/questions/12755997/how-to-create-streams-from-string-in-node-js">Create readable stream from object</a>
+3.<a href="https://github.com/Microsoft/vscode-recipes/tree/master/debugging-mocha-tests">Debugging tests in VS Code</a>
+4.<a href="https://nodejs.org/api/fs.html">Node.js v10.8.0 Documentation (FileSystem)</a>
+5.<a href="http://taobaofed.org/blog/2017/08/31/nodejs-stream/">深入理解 Node.js Stream 内部机制</a>
+6.<a href="http://www.runoob.com/nodejs/nodejs-tutorial.html">Node.js 教程 @ RUNOOB.COM</a>
+7.<a href="https://mochajs.org/#getting-started">Mocha getting started</a>
+8.<a href="https://www.dofactory.com/javascript/command-design-pattern">Command JavaScript Design Pattern</a>
+9.<a href="https://cythilya.github.io/2017/09/17/unit-test-with-mocha-chai-and-sinon/">單元測試：Mocha、Chai 和 Sinon</a>
+10.<a href="http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html">测试框架 Mocha 实例教程</a>
+11.<a href="http://wiki.jikexueyuan.com/project/node-lessons/mocha-should-istanbul.html">测试用例：mocha，should，istanbul</a>
+12.<a href="https://www.eebreakdown.com/2016/09/nodejs-eventemitter.html?m=1">非同步程式碼之霧：Node.js 的事件迴圈與 EventEmitter</a>
+13.<a href="https://larrylu.blog/improve-code-quality-using-eslint-742cf1f384f1">[JS] 使用 ESLint 提高程式碼品質</a>
+14.<a href="https://denny.qollie.com/2016/07/11/eslint-fxcking-setup/">淺入淺出 eslint 與實作</a></p>
 
   </div>
   
 
 <div class="post--navigation post--navigation-single">
     
-    <a href="/2018/07/azure-redis-connection-exception-socketclosed/" class="post--navigation-prev">
+    <a href="/2018/07/2018-07-22-mongodb-getting-started/" class="post--navigation-prev">
       <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">Azure Redis Connection Exception: SocketClosed</span>
-    </a>
-    
-    
-    <a href="/2018/07/2018-07-22-mongodb-getting-started/" class="post--navigation-next">
       <span class="navigation-tittle">2018 07 22 Mongodb Getting Started</span>
-      <i aria-hidden="true" class="fa fa-chevron-right"></i>
     </a>
+    
     
 </div>
 

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://neofelisho.github.io/2018/08/2018-08-05-nodejs-getting-started/</loc>
+    <lastmod>2018-08-05T23:50:20+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://neofelisho.github.io/2018/07/2018-07-22-mongodb-getting-started/</loc>
     <lastmod>2018-07-22T23:01:09+08:00</lastmod>
   </url>
@@ -133,8 +138,14 @@
   </url>
   
   <url>
+    <loc>https://neofelisho.github.io/tags/node.js/</loc>
+    <lastmod>2018-08-05T23:50:20+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://neofelisho.github.io/posts/</loc>
-    <lastmod>2018-07-22T23:01:09+08:00</lastmod>
+    <lastmod>2018-08-05T23:50:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -206,7 +217,7 @@
   
   <url>
     <loc>https://neofelisho.github.io/</loc>
-    <lastmod>2018-07-22T23:01:09+08:00</lastmod>
+    <lastmod>2018-08-05T23:50:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   

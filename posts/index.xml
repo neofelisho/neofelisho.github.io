@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 22 Jul 2018 23:01:09 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Aug 2018 23:50:20 +0800</lastBuildDate>
     
 	<atom:link href="https://neofelisho.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2018 08 05 Nodejs Getting Started</title>
+      <link>https://neofelisho.github.io/2018/08/2018-08-05-nodejs-getting-started/</link>
+      <pubDate>Sun, 05 Aug 2018 23:50:20 +0800</pubDate>
+      
+      <guid>https://neofelisho.github.io/2018/08/2018-08-05-nodejs-getting-started/</guid>
+      <description>Reference 1.Cheetsheet 2.Create readable stream from object 3.Debugging tests in VS Code 4.Node.js v10.8.0 Documentation (FileSystem) 5.深入理解 Node.js Stream 内部机制 6.Node.js 教程 @ RUNOOB.COM 7.Mocha getting started 8.Command JavaScript Design Pattern 9.單元測試：Mocha、Chai 和 Sinon 10.测试框架 Mocha 实例教程 11.测试用例：mocha，should，istanbul 12.非同步程式碼之霧：Node.js 的事件迴圈與 EventEmitter 13.[JS] 使用 ESLint 提高程式碼品質 14.淺入淺出 eslint 與實作</description>
+    </item>
     
     <item>
       <title>2018 07 22 Mongodb Getting Started</title>
