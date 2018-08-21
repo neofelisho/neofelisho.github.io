@@ -4,7 +4,7 @@
     
 
     <head>
-    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <link href="https://gmpg.org/xfn/11" rel="profile">
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Cache-Control" content="public" />
@@ -21,10 +21,10 @@
 <meta name="keywords" content="blog,c#,golang,.net,azure,backend,thoughts,photography">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2018 08 05 Nodejs Getting Started"/>
-<meta name="twitter:description" content="Reference 1.Cheetsheet 2.Create readable stream from object 3.Debugging tests in VS Code 4.Node.js v10.8.0 Documentation (FileSystem) 5.深入理解 Node.js Stream 内部机制 6.Node.js 教程 @ RUNOOB.COM 7.Mocha getting started 8.Command JavaScript Design Pattern 9.單元測試：Mocha、Chai 和 Sinon 10.测试框架 Mocha 实例教程 11.测试用例：mocha，should，istanbul 12.非同步程式碼之霧：Node.js 的事件迴圈與 EventEmitter 13.[JS] 使用 ESLint 提高程式碼品質 14.淺入淺出 eslint 與實作 15.JavaScript: RegExp 16.Measurement of Node.js execution time 17.Node.js: console.timeLog([label][, &hellip;data])"/>
+<meta name="twitter:description" content="Reference  Cheetsheet Create readable stream from object Debugging tests in VS Code Node.js v10.8.0 Documentation (FileSystem) 深入理解 Node.js Stream 内部机制 Node.js 教程 @ RUNOOB.COM Mocha getting started Command JavaScript Design Pattern 單元測試：Mocha、Chai 和 Sinon 测试框架 Mocha 实例教程 测试用例：mocha，should，istanbul 非同步程式碼之霧：Node.js 的事件迴圈與 EventEmitter [JS] 使用 ESLint 提高程式碼品質 淺入淺出 eslint 與實作 JavaScript: RegExp Measurement of Node.js execution time Node.js: console.timeLog([label][, &hellip;data]) @use JSDoc Reading text and binary data with Node.js readable streams How To Use node."/>
 
 <meta property="og:title" content="2018 08 05 Nodejs Getting Started" />
-<meta property="og:description" content="Reference 1.Cheetsheet 2.Create readable stream from object 3.Debugging tests in VS Code 4.Node.js v10.8.0 Documentation (FileSystem) 5.深入理解 Node.js Stream 内部机制 6.Node.js 教程 @ RUNOOB.COM 7.Mocha getting started 8.Command JavaScript Design Pattern 9.單元測試：Mocha、Chai 和 Sinon 10.测试框架 Mocha 实例教程 11.测试用例：mocha，should，istanbul 12.非同步程式碼之霧：Node.js 的事件迴圈與 EventEmitter 13.[JS] 使用 ESLint 提高程式碼品質 14.淺入淺出 eslint 與實作 15.JavaScript: RegExp 16.Measurement of Node.js execution time 17.Node.js: console.timeLog([label][, &hellip;data])" />
+<meta property="og:description" content="Reference  Cheetsheet Create readable stream from object Debugging tests in VS Code Node.js v10.8.0 Documentation (FileSystem) 深入理解 Node.js Stream 内部机制 Node.js 教程 @ RUNOOB.COM Mocha getting started Command JavaScript Design Pattern 單元測試：Mocha、Chai 和 Sinon 测试框架 Mocha 实例教程 测试用例：mocha，should，istanbul 非同步程式碼之霧：Node.js 的事件迴圈與 EventEmitter [JS] 使用 ESLint 提高程式碼品質 淺入淺出 eslint 與實作 JavaScript: RegExp Measurement of Node.js execution time Node.js: console.timeLog([label][, &hellip;data]) @use JSDoc Reading text and binary data with Node.js readable streams How To Use node." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://neofelisho.github.io/2018/08/2018-08-05-nodejs-getting-started/" />
 
@@ -47,12 +47,14 @@
 
     
 
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
 
 
 
-<link rel="stylesheet" href="https://neofelisho.github.io//css/hyde-hyde.css">
-<link rel="stylesheet" href="https://neofelisho.github.io//css/print.min.css" media="print">
+
+<link rel="stylesheet" href="/css/hyde-hyde.css">
+<link rel="stylesheet" href="/css/print.min.css" media="print">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -126,6 +128,7 @@
 	
 	
 	
+	
 	&nbsp;<a href="mailto:neofelisho&#43;blog@gmail.com"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
 	
 </section>
@@ -164,7 +167,7 @@
           <br/>
            <i class="fas fa-tags"></i>
           
-          <a class="post__tag" href="/tags/node.js">node.js</a>
+          <a class="badge badge-tag" href="/tags/node.js">node.js</a>
           
       
     
@@ -180,23 +183,33 @@
 
 <h2 id="reference">Reference</h2>
 
-<p>1.<a href="https://devhints.io/nodejs-stream">Cheetsheet</a>
-2.<a href="https://stackoverflow.com/questions/12755997/how-to-create-streams-from-string-in-node-js">Create readable stream from object</a>
-3.<a href="https://github.com/Microsoft/vscode-recipes/tree/master/debugging-mocha-tests">Debugging tests in VS Code</a>
-4.<a href="https://nodejs.org/api/fs.html">Node.js v10.8.0 Documentation (FileSystem)</a>
-5.<a href="http://taobaofed.org/blog/2017/08/31/nodejs-stream/">深入理解 Node.js Stream 内部机制</a>
-6.<a href="http://www.runoob.com/nodejs/nodejs-tutorial.html">Node.js 教程 @ RUNOOB.COM</a>
-7.<a href="https://mochajs.org/#getting-started">Mocha getting started</a>
-8.<a href="https://www.dofactory.com/javascript/command-design-pattern">Command JavaScript Design Pattern</a>
-9.<a href="https://cythilya.github.io/2017/09/17/unit-test-with-mocha-chai-and-sinon/">單元測試：Mocha、Chai 和 Sinon</a>
-10.<a href="http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html">测试框架 Mocha 实例教程</a>
-11.<a href="http://wiki.jikexueyuan.com/project/node-lessons/mocha-should-istanbul.html">测试用例：mocha，should，istanbul</a>
-12.<a href="https://www.eebreakdown.com/2016/09/nodejs-eventemitter.html?m=1">非同步程式碼之霧：Node.js 的事件迴圈與 EventEmitter</a>
-13.<a href="https://larrylu.blog/improve-code-quality-using-eslint-742cf1f384f1">[JS] 使用 ESLint 提高程式碼品質</a>
-14.<a href="https://denny.qollie.com/2016/07/11/eslint-fxcking-setup/">淺入淺出 eslint 與實作</a>
-15.<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Syntax">JavaScript: RegExp</a>
-16.<a href="https://blog.abelotech.com/posts/measure-execution-time-nodejs-javascript/">Measurement of Node.js execution time</a>
-17.<a href="https://nodejs.org/api/console.html#console_console_timelog_label_data">Node.js: console.timeLog([label][, &hellip;data])</a></p>
+<ol>
+<li><a href="https://devhints.io/nodejs-stream">Cheetsheet</a></li>
+<li><a href="https://stackoverflow.com/questions/12755997/how-to-create-streams-from-string-in-node-js">Create readable stream from object</a></li>
+<li><a href="https://github.com/Microsoft/vscode-recipes/tree/master/debugging-mocha-tests">Debugging tests in VS Code</a></li>
+<li><a href="https://nodejs.org/api/fs.html">Node.js v10.8.0 Documentation (FileSystem)</a></li>
+<li><a href="http://taobaofed.org/blog/2017/08/31/nodejs-stream/">深入理解 Node.js Stream 内部机制</a></li>
+<li><a href="http://www.runoob.com/nodejs/nodejs-tutorial.html">Node.js 教程 @ RUNOOB.COM</a></li>
+<li><a href="https://mochajs.org/#getting-started">Mocha getting started</a></li>
+<li><a href="https://www.dofactory.com/javascript/command-design-pattern">Command JavaScript Design Pattern</a></li>
+<li><a href="https://cythilya.github.io/2017/09/17/unit-test-with-mocha-chai-and-sinon/">單元測試：Mocha、Chai 和 Sinon</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html">测试框架 Mocha 实例教程</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/node-lessons/mocha-should-istanbul.html">测试用例：mocha，should，istanbul</a></li>
+<li><a href="https://www.eebreakdown.com/2016/09/nodejs-eventemitter.html?m=1">非同步程式碼之霧：Node.js 的事件迴圈與 EventEmitter</a></li>
+<li><a href="https://larrylu.blog/improve-code-quality-using-eslint-742cf1f384f1">[JS] 使用 ESLint 提高程式碼品質</a></li>
+<li><a href="https://denny.qollie.com/2016/07/11/eslint-fxcking-setup/">淺入淺出 eslint 與實作</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Syntax">JavaScript: RegExp</a></li>
+<li><a href="https://blog.abelotech.com/posts/measure-execution-time-nodejs-javascript/">Measurement of Node.js execution time</a></li>
+<li><a href="https://nodejs.org/api/console.html#console_console_timelog_label_data">Node.js: console.timeLog([label][, &hellip;data])</a></li>
+<li><a href="http://usejsdoc.org/tags-param.html">@use JSDoc</a></li>
+<li><a href="http://codewinds.com/blog/2013-08-04-nodejs-readable-streams.html">Reading text and binary data with Node.js readable streams</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-node-js-request-and-cheerio-to-set-up-simple-web-scraping">How To Use node.js, request and cheerio to Set Up Simple Web-Scraping</a></li>
+<li><a href="https://andyyou.github.io/2017/06/27/js-promise/">Promise 學習筆記</a></li>
+<li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Using_promises">使用 Promise</a></li>
+<li><a href="https://www.eebreakdown.com/2016/10/nodejs-streams.html">海納百川：Node.js Streams</a></li>
+<li><a href="https://gist.github.com/anvk/5602ec398e4fdc521e2bf9940fd90f84">Sequential execution of Promises using reduce()</a></li>
+<li><a href="https://coderwall.com/p/ijy61g/promise-chains-with-node-js">Promise Chains with Node.js (using Q)</a></li>
+</ol>
 
   </div>
   
@@ -273,12 +286,17 @@ if (!doNotTrack) {
 </script>
 
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-<script type="text/javascript">
-    hljs.configure({languages: []});
-    hljs.initHighlightingOnLoad();
-</script>
+    
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        
+        <script type="text/javascript">
+            hljs.configure({languages: []});
+            hljs.initHighlightingOnLoad();
+        </script>
+        
+        
 
 
 
