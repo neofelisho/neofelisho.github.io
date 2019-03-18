@@ -6,17 +6,26 @@
     <description>Recent content in c# on Neo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Jul 2018 23:01:09 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 30 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://neofelisho.github.io/tags/c#/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>2018 07 22 Mongodb Getting Started</title>
-      <link>https://neofelisho.github.io/posts/2018-07-22-mongodb-getting-started/</link>
-      <pubDate>Sun, 22 Jul 2018 23:01:09 +0800</pubDate>
+      <title>Strange Issue With System.Net.Http 4.2.0.0 Not Found</title>
+      <link>https://neofelisho.github.io/blog/2018-09-20-strange-issue-with-system-net-http-4-2-0-0-not-found/</link>
+      <pubDate>Sun, 30 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/posts/2018-07-22-mongodb-getting-started/</guid>
+      <guid>https://neofelisho.github.io/blog/2018-09-20-strange-issue-with-system-net-http-4-2-0-0-not-found/</guid>
+      <description>https://stackoverflow.com/questions/47570912/strange-issue-with-system-net-http-4-2-0-0-not-found</description>
+    </item>
+    
+    <item>
+      <title>Memo for MongoDB</title>
+      <link>https://neofelisho.github.io/blog/2018-07-22-mongodb-getting-started/</link>
+      <pubDate>Sun, 22 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/blog/2018-07-22-mongodb-getting-started/</guid>
       <description> Reference  Indexing and MongoDB Query Performance MongoDB Driver Quick Tour MongoDB .NET Driver API Documentation New collection with index? POCO Documents in Bson Should I set all decimals to double in Bson? Dynamic create collections and indexes in C#  </description>
     </item>
     

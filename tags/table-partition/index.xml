@@ -6,17 +6,17 @@
     <description>Recent content in table partition on Neo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Aug 2018 15:20:13 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://neofelisho.github.io/tags/table-partition/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>2018 08 30 Designing a Scalable Partitioning Strategy for Azure Table Storage</title>
-      <link>https://neofelisho.github.io/posts/2018-08-30-designing-a-scalable-partitioning-strategy-for-azure-table-storage/</link>
-      <pubDate>Thu, 30 Aug 2018 15:20:13 +0800</pubDate>
+      <title>Memo for Designing a Scalable Partitioning Strategy for Azure Table Storage</title>
+      <link>https://neofelisho.github.io/blog/2018-08-30-designing-a-scalable-partitioning-strategy-for-azure-table-storage/</link>
+      <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/posts/2018-08-30-designing-a-scalable-partitioning-strategy-for-azure-table-storage/</guid>
+      <guid>https://neofelisho.github.io/blog/2018-08-30-designing-a-scalable-partitioning-strategy-for-azure-table-storage/</guid>
       <description> Reference  Designing a Scalable Partitioning Strategy for Azure Table Storage  </description>
     </item>
     

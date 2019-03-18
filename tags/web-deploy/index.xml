@@ -13,10 +13,10 @@
     
     <item>
       <title>Cannot publish to deployment slot of Azure app service</title>
-      <link>https://neofelisho.github.io/posts/2018-05-24-cannot-web-deploy-to-app-service-slot/</link>
+      <link>https://neofelisho.github.io/blog/2018-05-24-cannot-web-deploy-to-app-service-slot/</link>
       <pubDate>Thu, 24 May 2018 19:30:00 +0800</pubDate>
       
-      <guid>https://neofelisho.github.io/posts/2018-05-24-cannot-web-deploy-to-app-service-slot/</guid>
+      <guid>https://neofelisho.github.io/blog/2018-05-24-cannot-web-deploy-to-app-service-slot/</guid>
       <description>Story
 We occured ERROR_DESTINATION_INVALID error while we using web deploy to publish web site to deployment slot of Azure app service.
 Solution Because of the site was running, some files were locked by server. Stop the app service (or iis) and re-deploy it again.</description>
