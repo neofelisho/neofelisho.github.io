@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C# on 尼欧の</title>
+    <title>c# on Neo&#39;s Blog</title>
     <link>https://neofelisho.github.io/tags/c#/</link>
-    <description>Recent content in C# on 尼欧の</description>
+    <description>Recent content in c# on Neo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Sun, 22 Jul 2018 23:01:09 +0800</lastBuildDate>
     
 	<atom:link href="https://neofelisho.github.io/tags/c#/index.xml" rel="self" type="application/rss+xml" />
@@ -14,10 +13,10 @@
     
     <item>
       <title>2018 07 22 Mongodb Getting Started</title>
-      <link>https://neofelisho.github.io/2018/07/2018-07-22-mongodb-getting-started/</link>
+      <link>https://neofelisho.github.io/posts/2018-07-22-mongodb-getting-started/</link>
       <pubDate>Sun, 22 Jul 2018 23:01:09 +0800</pubDate>
       
-      <guid>https://neofelisho.github.io/2018/07/2018-07-22-mongodb-getting-started/</guid>
+      <guid>https://neofelisho.github.io/posts/2018-07-22-mongodb-getting-started/</guid>
       <description> Reference  Indexing and MongoDB Query Performance MongoDB Driver Quick Tour MongoDB .NET Driver API Documentation New collection with index? POCO Documents in Bson Should I set all decimals to double in Bson? Dynamic create collections and indexes in C#  </description>
     </item>
     
