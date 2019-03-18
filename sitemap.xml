@@ -8,57 +8,62 @@
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2019-03-18-csharp-async-await-and-thread-deadlock/</loc>
+    <loc>https://neofelisho.github.io/blog/2019/2019-03-18-csharp-async-await-and-thread-deadlock/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2018-09-20-strange-issue-with-system-net-http-4-2-0-0-not-found/</loc>
+    <loc>https://neofelisho.github.io/blog/2019/2019-01-01-goal-exercise/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/blog/2018/2018-09-20-strange-issue-with-system-net-http-4-2-0-0-not-found/</loc>
     <lastmod>2018-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2018-08-30-designing-a-scalable-partitioning-strategy-for-azure-table-storage/</loc>
+    <loc>https://neofelisho.github.io/blog/2018/2018-08-30-designing-a-scalable-partitioning-strategy-for-azure-table-storage/</loc>
     <lastmod>2018-08-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2018-08-30-mongodb-schema-design/</loc>
+    <loc>https://neofelisho.github.io/blog/2018/2018-08-30-mongodb-schema-design/</loc>
     <lastmod>2018-08-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2018-08-29-azure-function-using-node-js/</loc>
+    <loc>https://neofelisho.github.io/blog/2018/2018-08-29-azure-function-using-node-js/</loc>
     <lastmod>2018-08-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2018-08-05-nodejs-getting-started/</loc>
+    <loc>https://neofelisho.github.io/blog/2018/2018-08-05-nodejs-getting-started/</loc>
     <lastmod>2018-08-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2018-07-22-mongodb-getting-started/</loc>
+    <loc>https://neofelisho.github.io/blog/2018/2018-07-22-mongodb-getting-started/</loc>
     <lastmod>2018-07-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2018-07-18-vsts-set-parameters-by-additional-arguments/</loc>
+    <loc>https://neofelisho.github.io/blog/2018/2018-07-18-vsts-set-parameters-by-additional-arguments/</loc>
     <lastmod>2018-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2018-07-02-azure-redis-connection-socket-closed/</loc>
+    <loc>https://neofelisho.github.io/blog/2018/2018-07-02-azure-redis-connection-socket-closed/</loc>
     <lastmod>2018-07-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2018-05-22-test-redis-sync-timeout/</loc>
+    <loc>https://neofelisho.github.io/blog/2018/2018-05-22-test-redis-sync-timeout/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/blog/2018-05-19-diagnostic-timeout-exceptions-for-azure-redis/</loc>
+    <loc>https://neofelisho.github.io/blog/2018/2018-05-19-diagnostic-timeout-exceptions-for-azure-redis/</loc>
     <lastmod>2018-05-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -182,8 +187,20 @@
   </url>
   
   <url>
+    <loc>https://neofelisho.github.io/tags/exercise/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://neofelisho.github.io/tags/index/</loc>
     <lastmod>2018-07-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/categories/memo/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -236,6 +253,12 @@
   </url>
   
   <url>
+    <loc>https://neofelisho.github.io/tags/sport/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://neofelisho.github.io/tags/storage-queue/</loc>
     <lastmod>2018-08-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -274,6 +297,12 @@
   <url>
     <loc>https://neofelisho.github.io/tags/timeout/</loc>
     <lastmod>2018-05-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/training/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

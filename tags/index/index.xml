@@ -13,10 +13,10 @@
     
     <item>
       <title>Memo for MongoDB</title>
-      <link>https://neofelisho.github.io/blog/2018-07-22-mongodb-getting-started/</link>
+      <link>https://neofelisho.github.io/blog/2018/2018-07-22-mongodb-getting-started/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/blog/2018-07-22-mongodb-getting-started/</guid>
+      <guid>https://neofelisho.github.io/blog/2018/2018-07-22-mongodb-getting-started/</guid>
       <description> Reference  Indexing and MongoDB Query Performance MongoDB Driver Quick Tour MongoDB .NET Driver API Documentation New collection with index? POCO Documents in Bson Should I set all decimals to double in Bson? Dynamic create collections and indexes in C#  </description>
     </item>
     
