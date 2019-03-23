@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://neofelisho.github.io/blog/2019/2019-03-23-csharp-java-derived-class/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://neofelisho.github.io/about/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
   </url>
@@ -69,7 +74,7 @@
   
   <url>
     <loc>https://neofelisho.github.io/blog/</loc>
-    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -92,7 +97,7 @@
   
   <url>
     <loc>https://neofelisho.github.io/</loc>
-    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -121,14 +126,20 @@
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/tags/additional-arguments/</loc>
+    <loc>https://neofelisho.github.io/tags/additional/</loc>
     <lastmod>2018-07-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/tags/application-insights/</loc>
+    <loc>https://neofelisho.github.io/tags/application/</loc>
     <lastmod>2018-05-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/arguments/</loc>
+    <lastmod>2018-07-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -151,20 +162,8 @@
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/tags/azure-devops/</loc>
-    <lastmod>2018-07-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://neofelisho.github.io/tags/azure-functions/</loc>
-    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://neofelisho.github.io/tags/azure-table-storage/</loc>
-    <lastmod>2018-08-30T00:00:00+00:00</lastmod>
+    <loc>https://neofelisho.github.io/tags/base/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -175,7 +174,13 @@
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/tags/continuous-delivery/</loc>
+    <loc>https://neofelisho.github.io/tags/class/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/continuous/</loc>
     <lastmod>2018-07-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -187,14 +192,56 @@
   </url>
   
   <url>
+    <loc>https://neofelisho.github.io/tags/delivery/</loc>
+    <lastmod>2018-07-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/derived/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/design/</loc>
+    <lastmod>2018-08-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/devops/</loc>
+    <lastmod>2018-07-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://neofelisho.github.io/tags/exercise/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://neofelisho.github.io/tags/functions/</loc>
+    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://neofelisho.github.io/tags/index/</loc>
     <lastmod>2018-07-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/insights/</loc>
+    <lastmod>2018-05-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/java/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -211,7 +258,7 @@
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/tags/network-stability/</loc>
+    <loc>https://neofelisho.github.io/tags/network/</loc>
     <lastmod>2018-07-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -229,13 +276,37 @@
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/categories/programming/</loc>
-    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
+    <loc>https://neofelisho.github.io/tags/object/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/tags/queue-trigger/</loc>
+    <loc>https://neofelisho.github.io/tags/oop/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/oriented/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/partition/</loc>
+    <lastmod>2018-08-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/categories/programming/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/queue/</loc>
     <lastmod>2018-08-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -247,7 +318,7 @@
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/tags/schema-design/</loc>
+    <loc>https://neofelisho.github.io/tags/schema/</loc>
     <lastmod>2018-08-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -259,8 +330,32 @@
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/tags/storage-queue/</loc>
-    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+    <loc>https://neofelisho.github.io/tags/stability/</loc>
+    <lastmod>2018-07-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/storage/</loc>
+    <lastmod>2018-08-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/studio/</loc>
+    <lastmod>2018-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/sub/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/super/</loc>
+    <lastmod>2019-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -277,7 +372,7 @@
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/tags/table-partition/</loc>
+    <loc>https://neofelisho.github.io/tags/table/</loc>
     <lastmod>2018-08-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -307,7 +402,13 @@
   </url>
   
   <url>
-    <loc>https://neofelisho.github.io/tags/visual-studio/</loc>
+    <loc>https://neofelisho.github.io/tags/trigger/</loc>
+    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://neofelisho.github.io/tags/visual/</loc>
     <lastmod>2018-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

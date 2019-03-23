@@ -57,20 +57,29 @@
     </item>
     
     <item>
-      <title>additional arguments</title>
-      <link>https://neofelisho.github.io/tags/additional-arguments/</link>
+      <title>additional</title>
+      <link>https://neofelisho.github.io/tags/additional/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/tags/additional-arguments/</guid>
+      <guid>https://neofelisho.github.io/tags/additional/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>application insights</title>
-      <link>https://neofelisho.github.io/tags/application-insights/</link>
+      <title>application</title>
+      <link>https://neofelisho.github.io/tags/application/</link>
       <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/tags/application-insights/</guid>
+      <guid>https://neofelisho.github.io/tags/application/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arguments</title>
+      <link>https://neofelisho.github.io/tags/arguments/</link>
+      <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/arguments/</guid>
       <description></description>
     </item>
     
@@ -102,29 +111,11 @@
     </item>
     
     <item>
-      <title>azure devops</title>
-      <link>https://neofelisho.github.io/tags/azure-devops/</link>
-      <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
+      <title>base</title>
+      <link>https://neofelisho.github.io/tags/base/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/tags/azure-devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>azure functions</title>
-      <link>https://neofelisho.github.io/tags/azure-functions/</link>
-      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://neofelisho.github.io/tags/azure-functions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>azure table storage</title>
-      <link>https://neofelisho.github.io/tags/azure-table-storage/</link>
-      <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://neofelisho.github.io/tags/azure-table-storage/</guid>
+      <guid>https://neofelisho.github.io/tags/base/</guid>
       <description></description>
     </item>
     
@@ -138,11 +129,20 @@
     </item>
     
     <item>
-      <title>continuous delivery</title>
-      <link>https://neofelisho.github.io/tags/continuous-delivery/</link>
+      <title>class</title>
+      <link>https://neofelisho.github.io/tags/class/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/class/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>continuous</title>
+      <link>https://neofelisho.github.io/tags/continuous/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/tags/continuous-delivery/</guid>
+      <guid>https://neofelisho.github.io/tags/continuous/</guid>
       <description></description>
     </item>
     
@@ -156,11 +156,56 @@
     </item>
     
     <item>
+      <title>delivery</title>
+      <link>https://neofelisho.github.io/tags/delivery/</link>
+      <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/delivery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>derived</title>
+      <link>https://neofelisho.github.io/tags/derived/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/derived/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://neofelisho.github.io/tags/design/</link>
+      <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://neofelisho.github.io/tags/devops/</link>
+      <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>exercise</title>
       <link>https://neofelisho.github.io/tags/exercise/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://neofelisho.github.io/tags/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>functions</title>
+      <link>https://neofelisho.github.io/tags/functions/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/functions/</guid>
       <description></description>
     </item>
     
@@ -174,6 +219,24 @@
     </item>
     
     <item>
+      <title>insights</title>
+      <link>https://neofelisho.github.io/tags/insights/</link>
+      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/insights/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://neofelisho.github.io/tags/java/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>mongodb</title>
       <link>https://neofelisho.github.io/tags/mongodb/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 +0000</pubDate>
@@ -183,11 +246,11 @@
     </item>
     
     <item>
-      <title>network stability</title>
-      <link>https://neofelisho.github.io/tags/network-stability/</link>
+      <title>network</title>
+      <link>https://neofelisho.github.io/tags/network/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/tags/network-stability/</guid>
+      <guid>https://neofelisho.github.io/tags/network/</guid>
       <description></description>
     </item>
     
@@ -210,11 +273,47 @@
     </item>
     
     <item>
-      <title>queue trigger</title>
-      <link>https://neofelisho.github.io/tags/queue-trigger/</link>
+      <title>object</title>
+      <link>https://neofelisho.github.io/tags/object/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/object/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oop</title>
+      <link>https://neofelisho.github.io/tags/oop/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/oop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oriented</title>
+      <link>https://neofelisho.github.io/tags/oriented/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/oriented/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>partition</title>
+      <link>https://neofelisho.github.io/tags/partition/</link>
+      <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/partition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>queue</title>
+      <link>https://neofelisho.github.io/tags/queue/</link>
       <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/tags/queue-trigger/</guid>
+      <guid>https://neofelisho.github.io/tags/queue/</guid>
       <description></description>
     </item>
     
@@ -228,11 +327,11 @@
     </item>
     
     <item>
-      <title>schema design</title>
-      <link>https://neofelisho.github.io/tags/schema-design/</link>
+      <title>schema</title>
+      <link>https://neofelisho.github.io/tags/schema/</link>
       <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/tags/schema-design/</guid>
+      <guid>https://neofelisho.github.io/tags/schema/</guid>
       <description></description>
     </item>
     
@@ -246,11 +345,47 @@
     </item>
     
     <item>
-      <title>storage queue</title>
-      <link>https://neofelisho.github.io/tags/storage-queue/</link>
-      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      <title>stability</title>
+      <link>https://neofelisho.github.io/tags/stability/</link>
+      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/tags/storage-queue/</guid>
+      <guid>https://neofelisho.github.io/tags/stability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>storage</title>
+      <link>https://neofelisho.github.io/tags/storage/</link>
+      <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>studio</title>
+      <link>https://neofelisho.github.io/tags/studio/</link>
+      <pubDate>Sun, 30 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/studio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sub</title>
+      <link>https://neofelisho.github.io/tags/sub/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/sub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>super</title>
+      <link>https://neofelisho.github.io/tags/super/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/super/</guid>
       <description></description>
     </item>
     
@@ -273,11 +408,11 @@
     </item>
     
     <item>
-      <title>table partition</title>
-      <link>https://neofelisho.github.io/tags/table-partition/</link>
+      <title>table</title>
+      <link>https://neofelisho.github.io/tags/table/</link>
       <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/tags/table-partition/</guid>
+      <guid>https://neofelisho.github.io/tags/table/</guid>
       <description></description>
     </item>
     
@@ -318,11 +453,20 @@
     </item>
     
     <item>
-      <title>visual studio</title>
-      <link>https://neofelisho.github.io/tags/visual-studio/</link>
+      <title>trigger</title>
+      <link>https://neofelisho.github.io/tags/trigger/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/tags/trigger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visual</title>
+      <link>https://neofelisho.github.io/tags/visual/</link>
       <pubDate>Sun, 30 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://neofelisho.github.io/tags/visual-studio/</guid>
+      <guid>https://neofelisho.github.io/tags/visual/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>visual on Neo&#39;s Blog</title>
+    <link>https://neofelisho.github.io/tags/visual/</link>
+    <description>Recent content in visual on Neo&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://neofelisho.github.io/tags/visual/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Strange Issue With System.Net.Http 4.2.0.0 Not Found</title>
+      <link>https://neofelisho.github.io/blog/2018/2018-09-20-strange-issue-with-system-net-http-4-2-0-0-not-found/</link>
+      <pubDate>Sun, 30 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://neofelisho.github.io/blog/2018/2018-09-20-strange-issue-with-system-net-http-4-2-0-0-not-found/</guid>
+      <description>https://stackoverflow.com/questions/47570912/strange-issue-with-system-net-http-4-2-0-0-not-found</description>
+    </item>
+    
+  </channel>
+</rss>
