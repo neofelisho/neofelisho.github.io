@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Property Based Testing in Elixir - Neo&#39;s Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.58.3" />
+  <meta itemprop="name" content="Property Based Testing in Elixir">
+<meta itemprop="description" content="Basic of property based testing and how to do it in Elixir by StreamData">
+
+
+<meta itemprop="datePublished" content="2019-09-23T15:13:34&#43;07:00" />
+<meta itemprop="dateModified" content="2019-09-23T15:13:34&#43;07:00" />
+<meta itemprop="wordCount" content="909">
+
+
+
+<meta itemprop="keywords" content="elixir,property,testing,streamdata,functional," />
+
+  <meta property="og:title" content="Property Based Testing in Elixir" />
+<meta property="og:description" content="Basic of property based testing and how to do it in Elixir by StreamData" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://neofelisho.github.io/blog/2019/2019-09-23-elixir-property-based-testing/" />
+<meta property="article:published_time" content="2019-09-23T15:13:34+07:00" />
+<meta property="article:modified_time" content="2019-09-23T15:13:34+07:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Property Based Testing in Elixir"/>
+<meta name="twitter:description" content="Basic of property based testing and how to do it in Elixir by StreamData"/>
+<meta name="twitter:site" content="@neofelisho"/>
+
+  
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+    
+      <link rel="stylesheet" href="https://neofelisho.github.io/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="https://neofelisho.github.io/css/main.min.6d22afd25890242552a63002032532e43f59b91eea454409de37a6bc3cc90b90.css" integrity="sha256-bSKv0liQJCVSpjACAyUy5D9ZuR7qRUQJ3jemvDzJC5A=">
+      <link rel="stylesheet" href="https://neofelisho.github.io/css/add-on.css">
+    
+  
+  
+  
+  
+    
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="https://neofelisho.github.io/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="https://neofelisho.github.io/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="https://neofelisho.github.io/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="https://neofelisho.github.io/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="https://neofelisho.github.io/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="https://neofelisho.github.io/contact/" class="link"><i class='far fa-envelope'></i> Contact</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="en" class="link active">English (en)</a>
+  
+    
+      
+    
+      
+        <a href="https://neofelisho.github.io/de" lang="de" class="no-lang link">Deutsch (de)</a>
+      
+    
+      
+        <a href="https://neofelisho.github.io/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
+      
+        <a href="https://neofelisho.github.io/pl" lang="pl" class="no-lang link">Polski (pl)</a>
+      
+    
+      
+        <a href="https://neofelisho.github.io/pt" lang="pt" class="no-lang link">Português (pt)</a>
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Property%20Based%20Testing%20in%20Elixir&amp;url=https%3a%2f%2fneofelisho.github.io%2fblog%2f2019%2f2019-09-23-elixir-property-based-testing%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fneofelisho.github.io%2fblog%2f2019%2f2019-09-23-elixir-property-based-testing%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fneofelisho.github.io%2fblog%2f2019%2f2019-09-23-elixir-property-based-testing%2f&amp;title=Property%20Based%20Testing%20in%20Elixir" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by Neo%20Ho&amp;body=https%3a%2f%2fneofelisho.github.io%2fblog%2f2019%2f2019-09-23-elixir-property-based-testing%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="https://neofelisho.github.io/"><img src="https://neofelisho.github.io/img/main/logo.jpg" class="circle" width="" alt="Neo&#39;s Avatar" /></a>
+  <header>
+    <h1>Neo's Blog</h1>
+  </header>
+  <main>
+    <p>Programming, photography, thoughts, amd memo <i class='fa fa-hand-peace-o'></i>.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/neofelisho" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/neofelisho" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//linkedin.com/in/neofelisho" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/flipay-co-ltd" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/neofelisho" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//instagram.com/neofelisho" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/neofelisho" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:neofelisho@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="https://neofelisho.github.io/blog/2019/2019-09-23-elixir-property-based-testing/">Property Based Testing in Elixir</a></h2>
+    
+    
+        <p>Basic of property based testing and how to do it in Elixir by StreamData</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2019-09-23 15:13:34 &#43;0700 &#43;07">
+      September 23, 2019
+    </time>
+    <span class="author">Neo Ho</span>
+    
+      <p>5 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Property%20Based%20Testing%20in%20Elixir&amp;url=https%3a%2f%2fneofelisho.github.io%2fblog%2f2019%2f2019-09-23-elixir-property-based-testing%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fneofelisho.github.io%2fblog%2f2019%2f2019-09-23-elixir-property-based-testing%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fneofelisho.github.io%2fblog%2f2019%2f2019-09-23-elixir-property-based-testing%2f&amp;title=Property%20Based%20Testing%20in%20Elixir" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by Neo%20Ho&amp;body=https%3a%2f%2fneofelisho.github.io%2fblog%2f2019%2f2019-09-23-elixir-property-based-testing%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+  <a href="https://neofelisho.github.io/blog/2019/2019-09-23-elixir-property-based-testing/" class="image featured">
+    <img src="https://neofelisho.github.io/img/serval.jpg" alt="serval">
+  </a>
+
+
+  <div class="content">
+    <p><strong>Brief: This is a story about a rookie alchemist to learn property testing in Elixir. If you are also a alchemist and want to know what&rsquo;s property testing, welcome to share my experience. If you are not, in the first half of this story, there are some basic knowledges about property testing for your.</strong></p>
+
+<blockquote>
+<p>Maybe we should consider about property based testing.</p>
+</blockquote>
+
+<p>In a retrospective meeting, a colleagues said this. So the story began&hellip;I knew nothing about it at that time.</p>
+
+<p><img src="https://neofelisho.github.io/img/2019/09/serval.jpg" alt="Leptailurus serval with many questions" /></p>
+
+<blockquote>
+<p>What&rsquo;s <code>property based testing</code>?</p>
+</blockquote>
+
+<p>First of all I need more information about it. Is it a cool stuff? Or just another buzzword?</p>
+
+<p>This is my first impression after gathering information: it&rsquo;s a kind of random generative testing. It confuse me, what&rsquo;s the difference with what we already have?</p>
+
+<p>Try to get a deeper understanding, there is a new term appear: <code>shrink</code>. It means that <code>property based testing</code> can tell us what&rsquo;s the minimal case to reproduce the error. Magic! Is there a rubber duck inside it?</p>
+
+<p><img src="https://neofelisho.github.io/img/2019/09/rubber_duck.jpg" alt="Rubber duck can debug code" /></p>
+
+<blockquote>
+<p>Maybe I know why I should use <code>property based testing</code>.</p>
+</blockquote>
+
+<p>Sounds great. Before that, we need to write so many test cases, and consider about corner cases. Now what we need is write a property test, and <del>rubber duck will do all things for us</del> the test framework can generate many cases including corner cases for us. If there is anythink wrong, it will tell us what&rsquo;s the minimal case to reproduce error.</p>
+
+<p>Recently I implemented a simple queue by Elixir. I think it should be a good sample to test by property.</p>
+
+<script type="application/javascript" src="https://gist.github.com/neofelisho/aeaa9e475776fb0be2d2e08144a811b5.js"></script>
+
+
+<p><img src="https://neofelisho.github.io/img/2019/09/property_001.png" alt="first property testing" /></p>
+
+<blockquote>
+<p>Heaven is near&hellip;?</p>
+</blockquote>
+
+<p>Everything is perfect. What I need in the future is 5~10 line of codes of testing, and <del>ruber duck will save the world</del> property testing will be responsible for everything else.</p>
+
+<p>But, you know, as an engineer, it&rsquo;s too smooth to believe. In order not to be as a fool, I add a test for <a href="https://www.urbandictionary.com/define.php?term=87">87</a> and it should be failed&hellip;because I am not an 87.</p>
+
+<script type="application/javascript" src="https://gist.github.com/neofelisho/32c9b8c08da715175ca58afeed55a364.js"></script>
+
+
+<p><img src="https://neofelisho.github.io/img/2019/09/property_002.png" alt="fool testing" /></p>
+
+<p>Okay&hellip;it&rsquo;s a cruel world, and I am an 87 /sad.</p>
+
+<p><img src="https://neofelisho.github.io/img/2019/09/cruel_world.jpg" alt="Cruel world" /></p>
+
+<p>I repeated the test over 10 times and it always passed. I finally got the test failure after I restrict the integer range to 86~88.</p>
+
+<p><img src="https://neofelisho.github.io/img/2019/09/property_003.png" alt="fool testing again" /></p>
+
+<blockquote>
+<p>So&hellip;is property testing useful?</p>
+</blockquote>
+
+<p>Now we know that property testing is a kind of random generative testing with shrinking ability. It generates many random test cases including common edge cases such as nil value, empty list and so on. If it find anything wrong during the testing, it will try to shrink the erros, to find the minimal set which cause the problem. The property testing can test more and more different cases over time, maybe it could find something unexpected. But, if we already know you edge case, and the case is not common one (ex. the case of 87), we should add unit test for that case along with property testing. Then, the world will be beautiful.</p>
+
+<p><img src="https://neofelisho.github.io/img/2019/09/beautiful_world.jpg" alt="Beautiful world" /></p>
+
+<blockquote>
+<p>How to do porperty testing?</p>
+</blockquote>
+
+<ol>
+<li>We need a property testing framework. In Elixir, we have <a href="https://hexdocs.pm/stream_data/StreamData.html">StreamData</a>.</li>
+<li>Suitable scenario. Key idea is about <code>property</code> or <code>behavior</code>. If there are some functions with specific property, it&rsquo;s time to use <code>property based testing</code>.</li>
+<li>Using patterns.</li>
+</ol>
+
+<p>In Elixir, it&rsquo;s quite simple and easy to understand how to write a basic property testing like the example below.</p>
+
+<pre><code class="language-elixir">property &quot;for what purpose&quot; do
+  check all item &lt;- term() do
+    # test here by the `item` taken from generator
+    # ...
+    assert actual == expected
+  end
+end
+</code></pre>
+
+<p>First line <code>property</code> means we want to use property testing (its <code>test</code> in unit testing). Focus on the second line. The <code>term()</code> is a generator provided by property testing framework (here is <code>StreamData</code>). StreamData provides many different kinds of generators, and <code>term()</code> generate all types of data. If the parameter of our method only accepts integer, we can use <code>integer()</code> instead here.</p>
+
+<p>We can regard <code>check all</code> as a <code>for loop</code>. Literally what it does is like <code>for all items from the generator</code>. The we can test our logic by the item taken from the generator.</p>
+
+<blockquote>
+<p>What&rsquo;s patterns about property testing?</p>
+</blockquote>
+
+<p>There are many articles about patterns. Here I only list the most commonly used in my opinion.</p>
+
+<ol>
+<li><p>Round-tripping</p>
+
+<p>a.k.a. Encoder/Decoder. For example, we have <code>float to string</code> and <code>float from string</code> two methods. We can generate random floating numbers, convert them to string then convert back, it should keep the same one.</p>
+
+<pre><code class="language-elixir">assert term |&gt; encoder() |&gt; decoder() == term
+</code></pre></li>
+
+<li><p>Oracle model</p>
+
+<p>Here is not that <a href="https://www.oracle.com/index.html">Oracle</a>. It means the older and correctness model we already have. For some reason such as performance we need to implement a new one. They should have the same <code>properties</code>.</p>
+
+<pre><code class="language-elixir">expected = oracle_code(term)
+actual = my_code(term)
+assert expected == actual
+</code></pre></li>
+
+<li><p>Smoke testing</p>
+
+<p>a.k.a Build verification testing. To ensure the functionality of our method working. For example, our method should always return <code>{:ok, result}</code> and <code>{:error, reason}</code>, then we can have a property testing like this:</p>
+
+<pre><code class="language-elixir">{status, _result} = my_code(term)
+assert status in [:ok, :error]
+</code></pre>
+
+<p>If it passed, it means our method works (no smoke or on-fired).</p></li>
+
+<li><p>Stateful testing</p>
+
+<p>If we have some stateful functions in our system, such as <code>Memcached</code>, <code>Redis</code>, <code>ets</code> or <code>GenServer</code> in Elixir. We can use property testing on it like below example:</p>
+
+<script type="application/javascript" src="https://gist.github.com/neofelisho/c6c30cc3036f71bcd16108c13431eeaf.js"></script>
+</li>
+</ol>
+
+<blockquote>
+<p>References</p>
+</blockquote>
+
+<p>These links help me a lot. I hope they also help you.</p>
+
+<ol>
+<li><a href="https://medium.com/criteo-labs/introduction-to-property-based-testing-f5236229d237">Introduction to Property Based Testing</a></li>
+<li><a href="https://lisacrispin.com/2019/04/20/property-based-or-generative-testing-insights-from-european-testing-conference/">Property-based or generative testing – insights from European Testing Conference</a></li>
+<li><a href="https://www.youtube.com/watch?v=p84DMv8TQuo">Property-based Testing is a Mindset - Andrea Leopardi - ElixirConf EU 2018</a></li>
+<li><a href="https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html">Property-based Testing Patterns</a></li>
+</ol>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://neofelisho.github.io/categories/programming">programming</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://neofelisho.github.io/tags/elixir">elixir</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://neofelisho.github.io/tags/property">property</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://neofelisho.github.io/tags/testing">testing</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://neofelisho.github.io/tags/streamdata">streamdata</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://neofelisho.github.io/tags/functional">functional</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "neofelisho" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+<div class="pagination">
+  
+    <a href="https://neofelisho.github.io/blog/2019/2019-03-23-csharp-java-derived-class/" class="button"><div class="previous"><div>Difference between C# and Java about derived class.</div></div></a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="https://neofelisho.github.io/blog/2019/2019-09-23-elixir-property-based-testing/" class="image featured">
+    <img src="https://neofelisho.github.io/img/serval.jpg" alt="serval">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="https://neofelisho.github.io/blog/2019/2019-09-23-elixir-property-based-testing/">Property Based Testing in Elixir</a></h1>
+          <time class="published" datetime="">September 23, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="https://neofelisho.github.io/blog/2019/2019-03-23-csharp-java-derived-class/" class="image featured">
+    <img src="https://neofelisho.github.io/img/2019/03/derived-class-01.PNG" alt="derived-class">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="https://neofelisho.github.io/blog/2019/2019-03-23-csharp-java-derived-class/">Difference between C# and Java about derived class.</a></h1>
+          <time class="published" datetime="">March 23, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="https://neofelisho.github.io/blog/2019/2019-03-18-csharp-async-await-and-thread-deadlock/">C# async/await and threads deadlock</a></h1>
+          <time class="published" datetime="">March 18, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="https://neofelisho.github.io/blog/2019/2019-01-01-goal-exercise/" class="image featured">
+    <img src="https://neofelisho.github.io/img/2019/01/exercise01.PNG" alt="exercise01">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="https://neofelisho.github.io/blog/2019/2019-01-01-goal-exercise/">Goal for 2019: Exercise more than 150 times.</a></h1>
+          <time class="published" datetime="">January 1, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="https://neofelisho.github.io/blog/2018/2018-09-20-strange-issue-with-system-net-http-4-2-0-0-not-found/">Strange Issue With System.Net.Http 4.2.0.0 Not Found</a></h1>
+          <time class="published" datetime="">September 30, 2018</time>
+        </header>
+      </article>
+      
+      
+        <a href="https://neofelisho.github.io/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="https://neofelisho.github.io/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="https://neofelisho.github.io/categories/programming/">programming<span class="count">13</span></a>
+            
+          
+          <li>
+            
+              <a href="https://neofelisho.github.io/categories/memo/">memo<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>Thanks for <a href="https://themes.gohugo.io/future-imperfect">Julio Pescador's Hugo theme</a> and being powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+    <footer>
+      <a href="https://neofelisho.github.io/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/neofelisho" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/neofelisho" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//linkedin.com/in/neofelisho" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/flipay-co-ltd" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/neofelisho" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//instagram.com/neofelisho" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/neofelisho" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:neofelisho@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2019
+      
+        Neo&#39;s Blog
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.58.3' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=https://neofelisho.github.io/js/util.js></script>
+  <script src=https://neofelisho.github.io/js/main.js></script>
+  <script src=https://neofelisho.github.io/js/add-on.js></script>
+  
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-122668877-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    </div>
+  </body>
+</html>

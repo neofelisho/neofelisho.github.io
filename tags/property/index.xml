@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>property on Neo&#39;s Blog</title>
+    <link>https://neofelisho.github.io/tags/property/</link>
+    <description>Recent content in property on Neo&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Sep 2019 15:13:34 +0700</lastBuildDate>
+    
+	<atom:link href="https://neofelisho.github.io/tags/property/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Property Based Testing in Elixir</title>
+      <link>https://neofelisho.github.io/blog/2019/2019-09-23-elixir-property-based-testing/</link>
+      <pubDate>Mon, 23 Sep 2019 15:13:34 +0700</pubDate>
+      
+      <guid>https://neofelisho.github.io/blog/2019/2019-09-23-elixir-property-based-testing/</guid>
+      <description>Brief: This is a story about a rookie alchemist to learn property testing in Elixir. If you are also a alchemist and want to know what&amp;rsquo;s property testing, welcome to share my experience. If you are not, in the first half of this story, there are some basic knowledges about property testing for your.
+ Maybe we should consider about property based testing.
+ In a retrospective meeting, a colleagues said this.</description>
+    </item>
+    
+  </channel>
+</rss>

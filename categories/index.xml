@@ -5,10 +5,20 @@
     <link>https://neofelisho.github.io/categories/</link>
     <description>Recent content in Categories on Neo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Sep 2019 15:13:34 +0700</lastBuildDate>
     
 	<atom:link href="https://neofelisho.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>programming</title>
+      <link>https://neofelisho.github.io/categories/programming/</link>
+      <pubDate>Mon, 23 Sep 2019 15:13:34 +0700</pubDate>
+      
+      <guid>https://neofelisho.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>memo</title>
@@ -16,15 +26,6 @@
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://neofelisho.github.io/categories/memo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://neofelisho.github.io/categories/programming/</link>
-      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://neofelisho.github.io/categories/programming/</guid>
       <description></description>
     </item>
     
